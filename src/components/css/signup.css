@@ -1,0 +1,256 @@
+.App {
+    align-items: center;
+    font-family: 'Sky Text';
+}
+
+
+.pageWrapper {
+    font-family: 'Sky Text';
+}
+
+h2 {
+    font-family: 'Sky Text';
+}
+
+.supHeader {
+    background-position: top;
+    background-size: 100% 100%;
+    margin-top: 0px;
+    background: url('https://skyidassets-a.akamaihd.net/static/x9RwQdLbWyBRbpn5XSZQszlREJBy76mgSZojlBRf2HI.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 87px;
+}
+
+#logo {
+    height: 76px;
+    width: 126px;
+    margin: 0 auto;
+    background: url('https://skyidassets-a.akamaihd.net/static/DMjvbOtVqLSKd5fS83LBZ9ARBL2GeutCERBnXiU6fYy.png');
+    background-size: 126px 76px;
+    float: none;
+}
+
+.formContainer {
+    width: 28.75em;
+    margin: 0 auto;
+}
+
+.formHeader {
+    margin-top: 50px;
+}
+
+.supsignText {
+    font-family: 'Sky Text';
+    width: max-content;
+    display: flex;
+    font-size: 11px;
+    margin-left: 12px;
+}
+
+.supul {
+    margin-left: -35px;
+    margin-top: -2px;
+}
+
+
+.supinputSign {
+    width: 220px;
+    border-radius: 2px;
+    border: 1px solid #abb6c5;
+}
+
+.supforgotSign {
+    font-family: 'Sky Text';
+    font-size: 13px;
+}
+
+.supforgotSign:hover {
+    cursor: pointer;
+}
+
+.captcha {
+    border: 1px solid #abb6c5;
+    width: 180px;
+    height: 60px;
+    margin-left: 8px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.captcha img {
+    margin-left: -10px;
+    width: 175px;
+    height: 55px;
+}
+
+
+.checkbox1 {
+    width: 220px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.buttonrow {
+    display: flex;
+    margin-left: 55px;
+}
+
+.buttonrow .supforgotSign {
+    margin-top: 15px;
+}
+
+.signUpbreak {
+    margin-bottom: 7px;
+}
+
+.supsignIn {
+    margin-left: 40px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    min-height: 30px;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    width: 11em;
+    font-weight: 200;
+}
+
+.supFooter {
+    font-family: 'Sky Text';
+    margin: auto;
+    margin-top: 15px;
+}
+
+.supFooterBottom {
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
+.errorMessage{
+    font-family: 'Sky Text';
+    font-size: 12px;
+    color: red;
+    padding-top: 5px;
+}
+
+@media (max-width: 767px) {
+    .supHeader {
+        height: 51px;
+    }
+
+    #logo {
+        height: 45px;
+        width: 74px;
+        background-size: 74px 45px;
+    }
+
+    .checkmark {
+        width: unset;
+    }
+
+
+    .formWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .supFooter {
+        display: none;
+    }
+
+    .dropDown {
+        width: 260px !important;
+    }
+
+    .supFooterBottom {
+        display: none;
+    }
+
+    .formHeader {
+        margin-left: 90px;
+        font-size: 15px;
+    }
+
+    .supsignText {
+        font-size: 14px !important;
+    }
+
+    .supul {
+        font-size: 15px !important;
+    }
+
+    .inputFormWrapper {
+        margin-left: 80px;
+    }
+
+    .checkbox1 {
+        padding-left: 0px;
+    }
+
+    .buttonrow {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .buttonrow .supforgotSign {
+        display: none;
+
+    }
+
+    .supsignIn {
+        order: 0;
+        background-color: rgba(40, 115, 197, 0.8);
+        border-radius: 3px;
+        border-color: #0061a6;
+        min-height: 45px;
+        padding: 0.719rem;
+        font-size: 1.125rem;
+        line-height: 1.22222;
+        margin-left: -40px;
+        width: 250px;
+    }
+
+    .supCancel {
+        order: 2;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 3px;
+        min-height: 45px;
+        padding: 0.719rem;
+        font-size: 1.125rem;
+        line-height: 1.22222;
+        width: 250px;
+        margin-left: -40px;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        font-weight: 100;
+    }
+}
+
+@media (max-width: 400px) {
+    .inputFormWrapper {
+        margin-left: 50px
+    }
+
+    .formHeader {
+        margin-left: 50px;
+    }
+}
+
+@media (min-width:768px) {
+    .dropDown {
+        font-family: 'Sky Text';
+        width: 120px !important;
+        height: 27px;
+        outline: none;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    ul .supforgotSign {
+        font-size: 11px;
+    }
+
+    .supCancel{
+        display: none;
+    }
+}
