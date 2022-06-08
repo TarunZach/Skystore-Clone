@@ -21,16 +21,19 @@ const Header = (props) => {
     const handleRent = () => {
         setActive("rent");
     }
+
+    const handleHome = () => {
+        setActive("home");
+    }
+
+    const handleMovie = () => {
+        setActive("moviebox");
+    }
+
     useEffect(() => {
         console.log(active);
         props.onClick(active);
     })
-    
-
-    const handleHome = () => {
-        setActive("main");
-        props.onClick(active);
-    }
 
     return (
         <div className="header-bar">
@@ -44,24 +47,24 @@ const Header = (props) => {
                         <ul id="menu">
                             <a className='active' onClick={handleHome}><li>Home</li></a>
                             <hr className='sideNav' />
-                            <a href="#" onClick={() =>
+                            <a onClick={() =>
                                 history('/signin')}> <li>Sign In</li></a>
-                            <a href="#" onClick={() =>
+                            <a onClick={() =>
                                 history('/signup')
                             }><li>Sign Up</li></a>
                             <hr className='sideNav' />
-                            <a href="#"><li>Movies</li></a>
-                            <a href="#"><li>Sky Store Premiere</li></a>
-                            <a href="#"><li>Spring Sale</li></a>
-                            <a href="#"><li>Sky VIP</li></a>
-                            <a href="#"><li>TV</li></a>
+                            <a><li>Movies</li></a>
+                            <a><li>Sky Store Premiere</li></a>
+                            <a><li>Spring Sale</li></a>
+                            <a><li>Sky VIP</li></a>
+                            <a><li>TV</li></a>
                             <hr className='sideNav' />
-                            <a href="#"><li>Redeem Voucher</li></a>
+                            <a><li>Redeem Voucher</li></a>
                         </ul>
                     </div>
                     <span className='browseText'>Browse</span>
                     <div className="logo-wrapper">
-                        <a href="#" className="anchor logo-anchor">
+                        <a className="anchor logo-anchor">
                             <picture className='logo'>
                                 <img srcSet='https://www.skystore.com/versions/6.3.0/assets/img/sky-logo@2x.png' alt='sky store' />
                             </picture>
@@ -128,7 +131,7 @@ const Header = (props) => {
                             <li className="dropdown-item" style={{
                                 width: "89.25px"
                             }}>
-                                <button className="dropbtn" style={{
+                                <button className="dropbtn"  onClick={handleHome} style={{
                                     color: "#f4ce24",
                                     width: "89.25px"
                                 }}>
@@ -148,13 +151,13 @@ const Header = (props) => {
                                 </button>
                                 <div className="dropdown-content">
                                     <a className="anchor" onClick={handleRent}>New To Rent</a>
-                                    <a href="" className="anchor">New To Buy</a>
-                                    <a href="" className="anchor">Pre-Order</a>
-                                    <a href="" className="anchor">Movie Box Sets</a>
-                                    <a href="" className="anchor">Bond Collection</a>
-                                    <a href="" className="anchor">Official Film Chart</a>
-                                    <a href="" className="anchor">Browse</a>
-                                    <a href="" className="anchor">A to Z</a>
+                                    <a className="anchor">New To Buy</a>
+                                    <a className="anchor">Pre-Order</a>
+                                    <a className="anchor" onClick={handleMovie}>Movie Box Sets</a>
+                                    <a className="anchor">Bond Collection</a>
+                                    <a className="anchor">Official Film Chart</a>
+                                    <a className="anchor">Browse</a>
+                                    <a className="anchor">A to Z</a>
                                 </div>
                             </li>
                             <li className="dropdown-item skyStoreitem">

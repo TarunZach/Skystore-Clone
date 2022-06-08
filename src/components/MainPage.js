@@ -7,6 +7,8 @@ import Moviecard from './Mainpage/Moviecard';
 import Footer from './Mainpage/Footer';
 import { Button } from 'react-bootstrap';
 import Rent from './Mainpage/Rent';
+import MovieBoxSpotlight from './Mainpage/MovieBoxSpotlight';
+import MovieBoxCards from './Mainpage/MovieBoxCards';
 
 const MainPage = () => {
     const [active, setActive] = useState("home");
@@ -52,6 +54,23 @@ const MainPage = () => {
                             </div>
                         </>
 
+                    }
+
+                    {
+                        active === "moviebox" &&
+                        <>
+                            <div className="carouselItem">
+                                <MovieBoxSpotlight />
+                            </div>
+                            <div className="gradient">
+                            </div>
+                            <div className="card container">
+                                <section>
+                                    <MovieBoxCards />
+                                </section>
+                                <Button variant="primary" >Show More</Button>
+                            </div>
+                        </>
                     }
 
                 </div>
