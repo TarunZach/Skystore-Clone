@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import '../css/mainpage.css';
 
-function Header() {
+
+const Header = (props) => {
     let history = useNavigate();
     const [show, setShow] = useState(false);
+    const [active, setActive] = useState("home");
+
 
     const handleOnClick = () => {
         if (show == false) {
@@ -13,6 +16,20 @@ function Header() {
         else {
             setShow(false);
         }
+    }
+
+    const handleRent = () => {
+        setActive("rent");
+    }
+    useEffect(() => {
+        console.log(active);
+        props.onClick(active);
+    })
+    
+
+    const handleHome = () => {
+        setActive("main");
+        props.onClick(active);
     }
 
     return (
@@ -25,7 +42,7 @@ function Header() {
                         <span></span>
                         <span></span>
                         <ul id="menu">
-                            <a href="#" className='active'><li>Home</li></a>
+                            <a className='active' onClick={handleHome}><li>Home</li></a>
                             <hr className='sideNav' />
                             <a href="#" onClick={() =>
                                 history('/signin')}> <li>Sign In</li></a>
@@ -68,7 +85,7 @@ function Header() {
                                     </li>
                                 </ul>
                             </nav>
-                            <div class="search-container">
+                            <div className="search-container">
                                 <div className="search-input">
                                     <input
                                         type="search"
@@ -79,7 +96,7 @@ function Header() {
                                         placeholder='Search'
                                     />
                                     <span className='searchicon'>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-search" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" className="bi bi-search" viewBox="0 0 16 16">
                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                         </svg>
                                     </span>
@@ -91,7 +108,7 @@ function Header() {
                         <button className="searchToggle" onClick={handleOnClick}>
                             {
                                 !show ? <span className='searchiconmobile'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="bi bi-search" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" className="bi bi-search" viewBox="0 0 16 16">
                                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                     </svg>
                                 </span> : null
@@ -125,12 +142,12 @@ function Header() {
                                     width: "130px"
                                 }}>
                                     Movies
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                     </svg></span>
                                 </button>
                                 <div className="dropdown-content">
-                                    <a href="" className="anchor">New To Rent</a>
+                                    <a className="anchor" onClick={handleRent}>New To Rent</a>
                                     <a href="" className="anchor">New To Buy</a>
                                     <a href="" className="anchor">Pre-Order</a>
                                     <a href="" className="anchor">Movie Box Sets</a>
@@ -148,8 +165,8 @@ function Header() {
                             <li className="dropdown-item dropdown springSale">
                                 <button className="dropbtn springSalebtn">
                                     Spring Sale
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                     </svg></span>
                                 </button>
                                 <div className="dropdown-content">
@@ -172,8 +189,8 @@ function Header() {
                             <li className="dropdown-item dropdown vip">
                                 <button className="dropbtn vipbtn">
                                     Sky VIP
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                     </svg></span>
                                 </button>
                                 <div className="dropdown-content">
@@ -187,8 +204,8 @@ function Header() {
                                     width: "92px"
                                 }}>
                                     TV
-                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                     </svg></span>
                                 </button>
                                 <div className="dropdown-content">
@@ -212,5 +229,6 @@ function Header() {
         </div>
     );
 }
+
 
 export default Header

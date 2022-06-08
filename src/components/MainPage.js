@@ -6,8 +6,13 @@ import Spotlight from './Mainpage/Spotlight';
 import Moviecard from './Mainpage/Moviecard';
 import Footer from './Mainpage/Footer';
 import { Button } from 'react-bootstrap';
+import Rent from './Mainpage/Rent';
 
-const MainPage = (props) => {
+const MainPage = () => {
+    const [active, setActive] = useState("home");
+    const getData = (data) => {
+        setActive(data);
+    };
 
     return (
         <div className="page">
@@ -16,20 +21,39 @@ const MainPage = (props) => {
                     <title>Sky Store – The Latest Movies Straight From The Cinema</title>
                 </Helmet>
                 <header className="headerWrapper">
-                    <Header />
+                    <Header onClick={getData} />
                 </header>
                 <div className="movie-list">
-                    <div className="carouselItem">
-                        <Spotlight />
-                    </div>
-                    <div className="gradient">
-                    </div>
-                    <div className="card container">
-                        <section>
-                            <Moviecard />
-                        </section>
-                        <Button variant="primary" >Show More</Button>
-                    </div>
+                    {
+                        active === "home" &&
+                        <>
+                            <div className="carouselItem">
+                                <Spotlight />
+                            </div>
+                            <div className="gradient">
+                            </div>
+                            <div className="card container">
+                                <section>
+                                    <Moviecard />
+                                </section>
+                                <Button variant="primary" >Show More</Button>
+                            </div>
+                        </>
+                    }
+
+                    {
+                        active === "rent" &&
+                        <>
+                            <div className="card container rent">
+                                <section>
+                                    <Rent />
+                                </section>
+                                <Button variant="primary" >Show More</Button>
+                            </div>
+                        </>
+
+                    }
+
                 </div>
             </div>
             <div className="footer-wrapper">

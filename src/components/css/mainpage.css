@@ -883,6 +883,10 @@ li a {
     margin-top: 255px;
 }
 
+.rent{
+    margin-top: 50px;
+}
+
 .card h1 {
     font-family: 'Sky Text';
     font-size: 1.875rem;
@@ -927,7 +931,7 @@ li a {
 
 @media (min-width: 1000px) and (max-width: 1200px) {
     .card-wrapper {
-        width: 100%;
+        width: 20%;
         max-width: 135px;
     }
 
@@ -950,7 +954,7 @@ li a {
 
 @media (min-width: 800px) and (max-width: 1000px) {
     .card-wrapper {
-        width: 100%;
+        width: 20%;
         max-width: 125px;
         padding-left: 5px;
         padding-right: 5px;
@@ -967,7 +971,7 @@ li a {
         font-size: 13px;
     }
 
-    .container{
+    .card{
         width: 100%;
         max-width: 850px !important;
     }
@@ -975,7 +979,7 @@ li a {
 
 @media (min-width: 600px) and (max-width: 800px) {
     .card-wrapper {
-        width: 100%;
+        width: 25%;
         max-width: 160px;
         min-width: 130px;
     }
@@ -991,7 +995,7 @@ li a {
         font-size: 15px;
     }
 
-    .container{
+    .card{
         width: 100%;
         max-width: 900px !important;
     }
@@ -1023,7 +1027,7 @@ li a {
         font-size: 15px;
     }
 
-    .container{
+    .card{
         width: 100%;
         max-width: 900px !important;
     }
@@ -1031,9 +1035,10 @@ li a {
 
 @media (max-width: 475px) {
     .card-wrapper {
-        width: 100%;
+        width: 33%;
         max-width: 120px;
         min-width: 100px;
+        padding-left: 5px;
     }
 
     .cardimg {
@@ -1047,7 +1052,7 @@ li a {
         font-size: 15px;
     }
 
-    .container{
+    .card{
         width: 100%;
         max-width: 900px !important;
     }
@@ -1060,22 +1065,3 @@ li a {
     width: 185px;
     margin: auto auto 60px auto;
 }
-
-/*Footer*/
-
-.bottom-footer {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.appText {
-    color: white;
-    font-size: 1rem;
-}
-
-.gplayimg {
-    margin-left: 30px;
-}
-
-/*--*/
