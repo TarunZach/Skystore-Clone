@@ -1,19 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import './css/mainpage.css';
+import './Mainpage/css/mainpage.css';
 import { Helmet } from 'react-helmet';
 import Header from './Mainpage/Header';
 import Spotlight from './Mainpage/Spotlight';
 import Moviecard from './Mainpage/Moviecard';
 import Footer from './Mainpage/Footer';
 import { Button } from 'react-bootstrap';
-import Rent from './Mainpage/Rent';
-import MovieBoxSpotlight from './Mainpage/MovieBoxSpotlight';
-import MovieBoxCards from './Mainpage/MovieBoxCards';
+/*Menu*/
+import Rent from './Mainpage/menu/Rent';
+import MovieBoxSpotlight from './Mainpage/menu/MovieBoxSpotlight';
+import MovieBoxCards from './Mainpage/menu/MovieBoxCards';
+import Buy from './Mainpage/menu/Buy';
+import PreOrder from './Mainpage/menu/PreOrder';
+import Bond from './Mainpage/menu/Bond';
+import Premiere from './Mainpage/menu/Premiere';
+import Picks from './Mainpage/Store/Picks';
+import Under3 from './Mainpage/Store/Under3';
 
 const MainPage = () => {
     const [active, setActive] = useState("home");
     const getData = (data) => {
         setActive(data);
+    };
+
+    const goTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
     };
 
     return (
@@ -38,7 +52,14 @@ const MainPage = () => {
                                 <section>
                                     <Moviecard />
                                 </section>
-                                <Button variant="primary" >Show More</Button>
+                                <div className="button-wrapper">
+                                    <div className="button">
+                                        <Button variant="primary" className='buybutton'>Show More</Button>
+                                    </div>
+                                    <a onClick={goTop}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
+                                    </svg> Back to top</a>
+                                </div>
                             </div>
                         </>
                     }
@@ -50,7 +71,14 @@ const MainPage = () => {
                                 <section>
                                     <Rent />
                                 </section>
-                                <Button variant="primary" >Show More</Button>
+                                <div className="button-wrapper">
+                                    <div className="button">
+                                        <Button variant="primary" className='buybutton'>Show More</Button>
+                                    </div>
+                                    <a onClick={goTop}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
+                                    </svg> Back to top</a>
+                                </div>
                             </div>
                         </>
 
@@ -68,7 +96,81 @@ const MainPage = () => {
                                 <section>
                                     <MovieBoxCards />
                                 </section>
-                                <Button variant="primary" >Show More</Button>
+                                <div className="button-wrapper">
+                                    <div className="button">
+                                        <Button variant="primary" className='buybutton'>Show More</Button>
+                                    </div>
+                                    <a onClick={goTop}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
+                                    </svg> Back to top</a>
+                                </div>
+                            </div>
+                        </>
+                    }
+
+                    {
+                        active === "buy" &&
+                        <>
+                            <div className="card container rent">
+                                <section>
+                                    <Buy />
+                                </section>
+                            </div>
+                        </>
+                    }
+
+                    {
+                        active === "pre" &&
+                        <>
+                            <div className="card container rent">
+                                <section>
+                                    <PreOrder />
+                                </section>
+                            </div>
+                        </>
+                    }
+
+                    {
+                        active === "bond" &&
+                        <>
+                            <div className="card container rent">
+                                <section>
+                                    <Bond />
+                                </section>
+                            </div>
+                        </>
+                    }
+
+                    {
+                        active === "prem" &&
+                        <>
+                            <div className="card container rent">
+                                <section>
+                                    <Premiere />
+                                </section>
+                            </div>
+                        </>
+
+                    }
+
+                    {
+                        active === "picks" &&
+                        <>
+                            <div className="card container rent">
+                                <section>
+                                    <Picks />
+                                </section>
+                            </div>
+                        </>
+                    }
+
+                    {
+                        active === "under3" &&
+                        <>
+                            <div className="card container rent">
+                                <section>
+                                    <Under3 />
+                                </section>
                             </div>
                         </>
                     }

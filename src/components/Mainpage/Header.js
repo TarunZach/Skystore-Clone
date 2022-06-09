@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import '../css/mainpage.css';
+import './css/mainpage.css';
 
 
 const Header = (props) => {
@@ -28,6 +28,30 @@ const Header = (props) => {
 
     const handleMovie = () => {
         setActive("moviebox");
+    }
+
+    const handleBuy = () => {
+        setActive("buy");
+    }
+
+    const handlePre = () => {
+        setActive("pre");
+    }
+
+    const handleBond = () => {
+        setActive("bond");
+    }
+
+    const handlePrem = () => {
+        setActive("prem");
+    }
+
+    const handlePicks = () => {
+        setActive("picks");
+    }
+
+    const handleUnder3 = () => {
+        setActive("under3");
     }
 
     useEffect(() => {
@@ -151,17 +175,17 @@ const Header = (props) => {
                                 </button>
                                 <div className="dropdown-content">
                                     <a className="anchor" onClick={handleRent}>New To Rent</a>
-                                    <a className="anchor">New To Buy</a>
-                                    <a className="anchor">Pre-Order</a>
+                                    <a className="anchor" onClick={handleBuy}>New To Buy</a>
+                                    <a className="anchor" onClick={handlePre}>Pre-Order</a>
                                     <a className="anchor" onClick={handleMovie}>Movie Box Sets</a>
-                                    <a className="anchor">Bond Collection</a>
+                                    <a className="anchor" onClick={handleBond}>Bond Collection</a>
                                     <a className="anchor">Official Film Chart</a>
                                     <a className="anchor">Browse</a>
                                     <a className="anchor">A to Z</a>
                                 </div>
                             </li>
                             <li className="dropdown-item skyStoreitem">
-                                <button className="dropbtn dropbtnlong">
+                                <button className="dropbtn dropbtnlong" onClick={handlePrem}>
                                     Sky Store Premiere
                                 </button>
                             </li>
@@ -173,13 +197,13 @@ const Header = (props) => {
                                     </svg></span>
                                 </button>
                                 <div className="dropdown-content">
-                                    <a href="" className="anchor">Store Picks</a>
-                                    <a href="" className="anchor">Under £3</a>
-                                    <a href="" className="anchor">Under £4</a>
-                                    <a href="" className="anchor">Under £5</a>
-                                    <a href="" className="anchor">Movie Box Sets</a>
-                                    <a href="" className="anchor">TV Boxsets</a>
-                                    <a href="" className="anchor" style={{
+                                    <a className="anchor" onClick={handlePicks}>Store Picks</a>
+                                    <a className="anchor"onClick={handleUnder3}>Under £3</a>
+                                    <a className="anchor">Under £4</a>
+                                    <a className="anchor">Under £5</a>
+                                    <a className="anchor">Movie Box Sets</a>
+                                    <a className="anchor">TV Boxsets</a>
+                                    <a className="anchor" style={{
                                         width: "170px",
                                         height: "70px"
                                     }}><p style={{

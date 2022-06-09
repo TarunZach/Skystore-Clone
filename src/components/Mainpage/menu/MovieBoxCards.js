@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../css/mainpage.css';
-import image from '../storage/boximage.json';
+import image from '../../storage/boximage.json';
 
 
 function MovieBoxCards() {

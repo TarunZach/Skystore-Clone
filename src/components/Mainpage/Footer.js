@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import '../css/mainpage.css';
-import '../css/footer.css';
+import './css/mainpage.css';
+import './css/footer.css';
 
 function Footer() {
     return (

@@ -925,7 +925,7 @@ li a {
     max-width: 160px;
     min-width: 111px;
     height: 100%;
-    max-height: 228px;
+    height: 228px;
     min-height: 158px;
 }
 
@@ -1059,9 +1059,35 @@ li a {
 }
 /*---*/
 
+.button-wrapper{
+    display: flex;
+}
+
+.button{
+    margin: auto;
+    justify-content: center;
+}
+
 .btn {
     background-color: rgba(40, 115, 197, .8);
     font-size: 1.125rem;
     width: 185px;
     margin: auto auto 60px auto;
 }
+
+.button-wrapper a{
+    cursor: pointer;
+    color: #78b6fa !important;
+}
+
+.button-wrapper a:hover{
+    color: #f4ce24 !important;
+}
+
+.buybutton{
+        background-color: rgba(40, 115, 197, .8);
+        font-size: 1.125rem;
+        width: 185px;
+        margin: auto auto 60px 95px;
+}
+

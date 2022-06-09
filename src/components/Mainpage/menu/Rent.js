@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
-import './css/mainpage.css';
-import image from '../storage/images.json'
+import '../css/mainpage.css';
+import image from '../../storage/images.json'
 
-function Moviecard() {
+function Rent() {
 
     return (
         <>
-            <h1>Latest Movies & TV</h1>
+            <h1>New To Rent</h1>
             <Container>
                 <Row>
                     {
@@ -42,4 +42,4 @@ function Moviecard() {
     );
 }
 
-export default Moviecard
+export default Rent

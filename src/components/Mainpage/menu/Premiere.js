@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../css/mainpage.css';
-import image from '../storage/images.json'
+import image from '../../storage/images.json'
 
-function Rent() {
+function Premiere() {
 
     return (
         <>
-            <h1>New To Rent</h1>
+            <h1>Sky Store Premiere</h1>
             <Container>
                 <Row>
                     {
                         image.images ?
                             <>
                                 {
-                                    image.images.map((img, key) => {
+                                    image.images.slice(0,12).map((img, key) => {
                                         return (
                                             <div className="card-wrapper" key={key}>
                                                 <a href="" className="card-content">
@@ -42,4 +42,4 @@ function Rent() {
     );
 }
 
-export default Rent
+export default Premiere

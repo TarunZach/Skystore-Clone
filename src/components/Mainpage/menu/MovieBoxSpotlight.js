@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
 import '../css/mainpage.css';
-import image from '../storage/movieboxcarousel.json';
+import image from '../../storage/movieboxcarousel.json';
 
 function MovieBoxSpotlight() {
     return (
