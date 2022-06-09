@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom'
-import './css/signup.css';
+import './Signup/signup.css';
 import '../styles.css';
 import { Helmet } from 'react-helmet';
 import Signup from './Signup/Signup';

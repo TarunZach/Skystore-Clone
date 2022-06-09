@@ -1,0 +1,96 @@
+.topborder {
+    width: 200px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.titlesin {
+    color: rgb(5, 52, 123);
+    font-size: 28px;
+    font-weight: 580px;
+    margin-left: 12px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.namelabel {
+    font-weight: 600px;
+}
+
+.forgotuser {
+    margin-left: 11px;
+    margin-top: 4px;
+    margin-bottom: 1px;
+}
+
+.privacylink {
+    font-size: 13px;
+    padding: 3px;
+    margin-left: 8px;
+}
+
+.midborder {
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.newid {
+    color: rgb(5, 52, 123);
+    font-size: 20px;
+    font-weight: 580;
+    margin-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.moretext {
+    width: auto;
+    margin-right: 40px;
+    margin-left: 11px;
+    margin-top: 2px;
+}
+
+.mobileborder {
+    width: 270px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.newidmobile {
+    margin-left: 5px;
+    margin-top: 4px;
+    margin-bottom: 15px;
+}
+
+.signintitle {
+    color: rgb(5, 52, 123);
+    font-size: 20px;
+    font-weight: 580;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.emailmob {
+    font-weight: 600;
+    margin-left: -5px;
+}
+
+.mobileforgot {
+    margin-left: 5px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.remembermobile {
+    font-size: 16px;
+}
+
+.privacymobile {
+    font-size: 16px;
+    padding: 3px;
+    margin-bottom: 10px;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom'
-import '../css/signup.css';
+import './signup.css';
 import '../../styles.css';
 
 function Signup() {
@@ -72,11 +72,7 @@ function Signup() {
     return (
         <form className="inputFormWrapper">
             <div className="form-group">
-                <label htmlFor="title" className='supsignText signText' style={{
-                    fontWeight: "600",
-                    marginLeft: "0px",
-                    fontSize: "12px"
-                }}>Title</label><span className='break signUpbreak' />
+                <label htmlFor="title" className='supsignText signText' id='titlesup'>Title</label><span className='break signUpbreak' />
                 <select
                     id='title'
                     className='supinputSign inputSign dropDown'
@@ -97,11 +93,7 @@ function Signup() {
             </div>
             <span className='break signUpbreak' />
             <div className="form-group">
-                <label htmlFor="fname" className='supsignText signText' style={{
-                    fontWeight: "600",
-                    marginLeft: "0px",
-                    fontSize: "12px"
-                }}>First name</label><span className='break signUpbreak' />
+                <label htmlFor="fname" className='supsignText signText' id='titlesup'>First name</label><span className='break signUpbreak' />
                 <input
                     type="text"
                     name="fname"
@@ -140,11 +132,7 @@ function Signup() {
 
             <span className='break signUpbreak' />
             <div className="form-group">
-                <label htmlFor="lname" className='supsignText signText' style={{
-                    fontWeight: "600",
-                    marginLeft: "0px",
-                    fontSize: "12px"
-                }}>Last name</label><span className='break signUpbreak' />
+                <label htmlFor="lname" className='supsignText signText' id='titlesup'>Last name</label><span className='break signUpbreak' />
                 <input
                     type="text"
                     name="lname"
@@ -182,11 +170,7 @@ function Signup() {
 
             <span className='break signUpbreak' />
             <div className="form-group">
-                <label htmlFor="email" className='supsignText signText' style={{
-                    fontWeight: "600",
-                    marginLeft: "0px",
-                    fontSize: "12px"
-                }}>Email address</label><span className='break signUpbreak' />
+                <label htmlFor="email" className='supsignText signText' id='titlesup'>Email address</label><span className='break signUpbreak' />
                 <input
                     type="email"
                     name="email"
@@ -224,11 +208,7 @@ function Signup() {
 
             <span className='break signUpbreak' />
             <div className="form-group">
-                <label htmlFor="confirmemail" className='supsignText signText' style={{
-                    fontWeight: "600",
-                    marginLeft: "0px",
-                    fontSize: "12px"
-                }}>Confirm email address</label><span className='break signUpbreak' />
+                <label htmlFor="confirmemail" className='supsignText signText' id='titlesup'>Confirm email address</label><span className='break signUpbreak' />
                 <input
                     type="email"
                     name="cemail"
@@ -260,11 +240,7 @@ function Signup() {
 
             <span className='break signUpbreak' />
             <div className="form-group">
-                <label htmlFor="pw" className='supsignText signText' style={{
-                    fontWeight: "600",
-                    marginLeft: "0px",
-                    fontSize: "12px"
-                }}>Password</label><span className='break signUpbreak' />
+                <label htmlFor="pw" className='supsignText signText' id='titlesup'>Password</label><span className='break signUpbreak' />
                 <input
                     type="password"
                     name="password"
@@ -303,11 +279,7 @@ function Signup() {
 
             <span className='break signUpbreak' />
             <div className="form-group">
-                <label htmlFor="confirmpass" className='supsignText signText' style={{
-                    fontWeight: "600",
-                    marginLeft: "0px",
-                    fontSize: "12px"
-                }}>Confirm password</label><span className='break signUpbreak' />
+                <label htmlFor="confirmpass" className='supsignText signText' id='titlesup'>Confirm password</label><span className='break signUpbreak' />
                 <input
                     type="password"
                     name="cpassword"
@@ -344,11 +316,7 @@ function Signup() {
 
             <span className='break signUpbreak' />
             <div className="form-group">
-                <label htmlFor="captcha" className='supsignText signText' style={{
-                    fontWeight: "600",
-                    marginLeft: "0px",
-                    fontSize: "12px"
-                }}>Enter the characters in the box</label><span className='break signUpbreak' />
+                <label htmlFor="captcha" className='supsignText signText' id='titlesup'>Enter the characters in the box</label><span className='break signUpbreak' />
                 <input type="text" name="captcha" id='captcha' className='supinputSign inputSign' />
             </div>
             <span className='break signUpbreak' />
@@ -356,17 +324,8 @@ function Signup() {
                 <input type="checkbox" className='checkmark' id='terms' style={{
                     marginLeft: "0px"
                 }} />
-                <label className='checkbox' htmlFor='terms' style={{
-                    display: "inline-block",
-                    marginTop: "0px"
-                }}>
-                    <p className='supsignText signText' style={{
-                        marginLeft: "5px",
-                        marginTop: "2px",
-                        fontSize: "12px",
-                        maxWidth: "250px",
-                        display: "inline-block"
-                    }}>I have read and agree to the Sky Store <a href='#' className='supforgotSign forgotSign'>terms & conditions</a> and the Sky <a href='#' className='supforgotSign forgotSign'>terms & conditions</a></p>
+                <label className='checkbox' htmlFor='terms' id='labelcheckbox'>
+                    <p className='supsignText signText' id='termsdescription'>I have read and agree to the Sky Store <a href='#' className='supforgotSign forgotSign'>terms & conditions</a> and the Sky <a href='#' className='supforgotSign forgotSign'>terms & conditions</a></p>
                 </label>
             </div>
 
@@ -376,17 +335,8 @@ function Signup() {
                 <input type="checkbox" className='checkmark' id='conditions' style={{
                     marginLeft: "0px"
                 }} />
-                <label className='checkbox' htmlFor='terms' style={{
-                    display: "inline-block",
-                    marginTop: "0px"
-                }}>
-                    <p className='supsignText signText' style={{
-                        marginLeft: "5px",
-                        marginTop: "2px",
-                        fontSize: "12px",
-                        maxWidth: "250px",
-                        display: "inline-block"
-                    }}>We’d like to use your contact details to update you about offers, products and services. You are free to change your mind at any stage in the future. You can view our  <a href='#' className='supforgotSign forgotSign'>Privacy & Cookies Notice</a>  on Sky.com. If this is OK please tick here. </p>
+                <label className='checkbox' htmlFor='terms' id='labelcheckbox'>
+                    <p className='supsignText signText' id='termsdescription'>We’d like to use your contact details to update you about offers, products and services. You are free to change your mind at any stage in the future. You can view our  <a href='#' className='supforgotSign forgotSign'>Privacy & Cookies Notice</a>  on Sky.com. If this is OK please tick here. </p>
                 </label>
             </div>
 
@@ -401,47 +351,26 @@ function Signup() {
             </div>
 
             <div className="supFooter">
-                <hr style={{
-                    width: "600px",
-                    margin: "auto",
-                    marginLeft: "-70px"
-                }}></hr>
+                <hr id='borderhr'></hr>
                 <div className='supfooterLinks'>
-                    <ul style={{
-                        marginBottom: "25px"
-                    }}>
+                    <ul id='listnav'>
                         <li>
-                            <a href='#' className='forgotSign' style={{
-                                fontSize: "11px",
-                                borderLeft: "none"
-                            }}>Privacy & Cookies Notice</a>
+                            <a href='#' className='forgotSign listlink firstlink'>Privacy & Cookies Notice</a>
                         </li>
                         <li>
-                            <a href='#' className='forgotSign' style={{
-                                fontSize: "11px"
-                            }}>Terms & Conditions</a>
+                            <a href='#' className='forgotSign listlink' id='listlink'>Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href='#' className='forgotSign' style={{
-                                fontSize: "11px"
-                            }}>Accessibility Information</a>
+                            <a href='#' className='forgotSign listlink' id='listlink'>Accessibility Information</a>
                         </li>
                         <li>
-                            <a href='#' className='forgotSign' style={{
-                                fontSize: "11px"
-                            }}>Feedback</a>
+                            <a href='#' className='forgotSign listlink' id='listlink'>Feedback</a>
                         </li>
 
                     </ul>
 
                 </div>
-                <hr style={{
-                    marginTop: "15px",
-                    marginBottom: "15px",
-                    width: "600px",
-
-                    marginLeft: "-70px"
-                }}></hr>
+                <hr id='footerborder'></hr>
             </div>
             <div className="supFooterBottom">
                 <span id="copyright" className='signText supsignText'>© 2022  Sky UK</span>

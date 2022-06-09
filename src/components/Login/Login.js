@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import '../../styles.css';
+import './login.css';
 import skylogo from '../../img/skylogo.png';
 
 
@@ -79,25 +80,11 @@ function Login() {
                 <img className='imglink' src={skylogo} alt='logo' onClick={() =>
                     history('/')
                 } />
-                <hr style={{
-                    width: "200px",
-                    marginTop: "0px",
-                    marginLeft: "10px",
-                    marginBottom: "2px"
-                }}></hr>
-                <h2 style={{
-                    color: "rgb(5,52,123)",
-                    fontSize: "28px",
-                    fontWeight: "580",
-                    marginLeft: "12px",
-                    marginTop: "0px",
-                    marginBottom: "5px"
-                }}>Sign in</h2>
+                <hr className='topborder'/>
+                <h2 className='titlesin'>Sign in</h2>
                 {/* ERROR! */}
                 <div className='form-group'>
-                    <label htmlFor="name" className='signText' style={{
-                        fontWeight: "600"
-                    }}>Email or Username</label>
+                    <label htmlFor="name" className='signText namelabel'>Email or Username</label>
                     <input
                         type="text"
                         name="username"
@@ -115,9 +102,7 @@ function Login() {
                 </div>
 
                 <div className='form-group'>
-                    <label htmlFor="password" className='signText' style={{
-                        fontWeight: "600"
-                    }}>Password</label>
+                    <label htmlFor="password" className='signText namelabel'>Password</label>
                     <input
                         type="password"
                         name="password"
@@ -134,43 +119,18 @@ function Login() {
                     }
                 </div>
 
-                <p className='signText' style={{
-                    marginLeft: "11px",
-                    marginTop: "4px",
-                    marginBottom: "1px"
-                }}>Forgotten <a className='forgotSign' href='#'>username</a> or <a className='forgotSign' href='#'>password</a>?</p>
+                <p className='signText forgotuser'>Forgotten <a className='forgotSign' href='#'>username</a> or <a className='forgotSign' href='#'>password</a>?</p>
 
                 <input type="checkbox" className='checkmark' /> <label className='signText'>Remember my username</label><br />
-                <a className='forgotSign' href='#' style={{
-                    fontSize: "13px",
-                    padding: "3px",
-                    marginLeft: "8px"
-                }}>Privacy & Cookies Notice</a><br />
+                <a className='forgotSign privacylink' href='#'>Privacy & Cookies Notice</a><br />
 
                 <input type="submit" className='signIn' value="Sign in" onClick={handleValidation} />
-                <hr style={{
-                    width: "200px",
-                    marginTop: "15px",
-                    marginLeft: "10px",
-                    marginBottom: "2px"
-                }}></hr>
-                <h2 style={{
-                    color: "rgb(5,52,123)",
-                    fontSize: "20px",
-                    fontWeight: "580",
-                    marginLeft: "12px",
-                    marginTop: "10px",
-                    marginBottom: "5px"
-                }}>New to Sky iD?</h2>
+                <hr className='midborder'/>
+                <h2 className='newid'>New to Sky iD?</h2>
                 <p className='signText signDescription'>You'll need a Sky iD before you can access some of our services.</p>
                 <p className='signText signDescription'>If you have signed up for another Sky online service you already have one.</p>
                 <div className='signInBottom'>
-                    <p className='signText' style={{
-                        width: "auto",
-                        marginRight: "40px",
-                        marginLeft: "11px",
-                        marginTop: "2px"
-                    }}>More about <a href='#' className='forgotSign'>Sky iD</a></p>
+                    <p className='signText moretext'>More about <a href='#' className='forgotSign'>Sky iD</a></p>
                     <button className='signUp' value="Sign up" onClick={() =>
                         history('/signup')
                     }>Sign up</button>

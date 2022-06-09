@@ -3,6 +3,50 @@
     font-family: 'Sky Text';
 }
 
+#titlesup {
+    font-weight: 600;
+    margin-left: 0px;
+    font-size: 12px;
+}
+
+#labelcheckbox {
+    display: inline-block;
+    margin-top: 0px;
+}
+
+#termsdescription {
+    margin-left: 5px;
+    margin-top: 2px;
+    font-size: 12px;
+    max-width: 250px;
+    display: inline-block;
+}
+
+#listnav {
+    margin-bottom: 25px;
+}
+
+.firstlink {
+    font-size: 11px;
+    border-left: none;
+}
+
+.listlink {
+    font-size: 11px;
+}
+
+#footerborder {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 600px;
+    margin-left: -70px;
+}
+
+.borderhr {
+    width: 600px;
+    margin: auto;
+    margin-left: -70px;
+}
 
 .pageWrapper {
     font-family: 'Sky Text';
@@ -126,7 +170,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.errorMessage{
+.errorMessage {
     font-family: 'Sky Text';
     font-size: 12px;
     color: red;
@@ -250,7 +294,7 @@ h2 {
         font-size: 11px;
     }
 
-    .supCancel{
+    .supCancel {
         display: none;
     }
 }

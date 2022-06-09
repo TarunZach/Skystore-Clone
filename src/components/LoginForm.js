@@ -15,44 +15,24 @@ const LoginForm = (props) => {
             </div>
             <div className='footer'>
 
-                <hr style={{
-                    marginTop: "15px",
-                    width: "960px",
-                    marginBottom: "0px"
-                }}></hr>
+                <hr className='footerborder' />
                 <div className='footerLinks'>
                     <ul>
                         <li>
-                            <a href='#' className='forgotSign' style={{
-                                fontSize: "11px",
-                                borderLeft: "none"
-                            }}>Privacy & Cookies Notice</a>
+                            <a href='#' className='forgotSign firstloglink'>Privacy & Cookies Notice</a>
                         </li>
                         <li>
-                            <a href='#' className='forgotSign' style={{
-                                fontSize: "11px",
-                                borderLeft: "solid 1px #cccccc"
-                            }}>Terms & Conditions</a>
+                            <a href='#' className='forgotSign loglink'>Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href='#' className='forgotSign' style={{
-                                fontSize: "11px",
-                                borderLeft: "solid 1px #cccccc"
-                            }}>Accessibility Information</a>
+                            <a href='#' className='forgotSign loglink'>Accessibility Information</a>
                         </li>
                         <li>
-                            <a href='#' className='forgotSign' style={{
-                                fontSize: "11px",
-                                borderLeft: "solid 1px #cccccc"
-                            }}>Feedback</a>
+                            <a href='#' className='forgotSign loglink'>Feedback</a>
                         </li>
 
                         <li>
-                            <p className='signText' style={{
-                                margin: "3px",
-                                marginLeft: "450px",
-                                fontSize: "11px"
-                            }}>© 2022 Sky UK</p>
+                            <p className='signText copyrightlog'>© 2022 Sky UK</p>
                         </li>
                     </ul>
                 </div>

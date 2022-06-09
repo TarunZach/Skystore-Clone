@@ -44,10 +44,11 @@
   src: url("//db.onlinewebfonts.com/t/0073e3300330cceadd2ceaa220b38423.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0073e3300330cceadd2ceaa220b38423.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0073e3300330cceadd2ceaa220b38423.woff") format("woff"), url("//db.onlinewebfonts.com/t/0073e3300330cceadd2ceaa220b38423.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0073e3300330cceadd2ceaa220b38423.svg#Sky Text") format("svg");
 }
 
-@media (min-width:768px){
-  .appHeader{
+@media (min-width:768px) {
+  .appHeader {
     width: 965px !important;
   }
+
   .skyForm {
     font-family: 'Sky Text';
     position: relative;
@@ -76,7 +77,7 @@
     margin: auto;
   }
 
-  .mobileForm{
+  .mobileForm {
     display: none;
   }
 
@@ -87,10 +88,11 @@
   }
 }
 
-@media (max-width:767px){
-  .appHeader{
+@media (max-width:767px) {
+  .appHeader {
     width: 100% !important;
   }
+
   .skyForm {
     display: none;
   }
@@ -103,7 +105,7 @@
     display: none;
   }
 
-  .mobileForm{
+  .mobileForm {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -123,7 +125,7 @@
   }
 
 
-  .inputSign{
+  .inputSign {
     margin-left: -5px;
     width: 260px !important;
     padding: 9px !important;
@@ -133,24 +135,24 @@
     font-size: 18px !important;
   }
 
-  .signText{
+  .signText {
     font-size: 16px !important;
     color: rgb(102, 102, 102);
   }
 
-  .checkmark{
+  .checkmark {
     margin-left: 5px !important;
     width: 20px;
     height: 20px;
     margin-bottom: 15px;
   }
 
-  .signInMobile{
+  .signInMobile {
     font-family: 'Sky Text';
     font-weight: bold;
     color: white;
     background-color: #0061a6;
-    border-radius: 5px ;
+    border-radius: 5px;
     width: 230px;
     height: 40px;
     font-size: 20px;
@@ -164,7 +166,7 @@ body {
   margin: auto;
 }
 
-.appHeader{
+.appHeader {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -177,8 +179,34 @@ hr {
   color: #888888;
 }
 
-.imglink:hover{
+.imglink{
+  margin-left: 10px;
+}
+
+.imglink:hover {
   cursor: pointer;
+}
+
+.footerborder {
+  margin-top: 15px;
+  width: 960px;
+  margin-bottom: 0px;
+}
+
+.firstloglink {
+  font-size: 11px;
+  border-left: none;
+}
+
+.loglink{
+  font-size: 11px;
+  border-left: solid 1px #cccccc;
+}
+
+.copyrightlog{
+  margin: 3px;
+  margin-left: 450px;
+  font-size: 11px;
 }
 
 .skyForm {
@@ -223,7 +251,7 @@ hr {
 
 .forgotSign {
   text-decoration: none;
-  color:rgb(0, 97, 166)
+  color: rgb(0, 97, 166)
 }
 
 .signIn {
@@ -289,13 +317,13 @@ hr {
   margin: auto;
 }
 
-ul li{
+ul li {
   float: left;
-    list-style-type: none;
-    
+  list-style-type: none;
+
 }
 
-ul{
+ul {
   position: relative;
   margin-top: 5px;
   padding-left: 40px;
@@ -306,11 +334,11 @@ li {
   color: #666666;
 }
 
-li a{
+li a {
   border-left: solid 1px #cccccc;
   padding: 0 0.5em;
 }
 
-.footerLinks{
+.footerLinks {
   display: inline;
 }

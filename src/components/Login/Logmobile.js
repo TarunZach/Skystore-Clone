@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import '../../styles.css';
+import './login.css'
 import skylogo from '../../img/skylogo.png';
 
 
@@ -76,36 +77,15 @@ function Logmobile() {
     return (
         <form className='skyFormMobile'>
             <div className='form-inner'>
-                <img src={skylogo} alt='logo' className='imglink' style={{
-                    marginLeft: "-10px"
-                }} onClick={() =>
+                <img src={skylogo} alt='logo' className='imglink' onClick={() =>
                     history('/')
                 } />
-                <hr style={{
-                    width: "270px",
-                    marginTop: "0px",
-                    // marginLeft: "10px",
-                    marginBottom: "2px"
-                }}></hr>
-                <p className='signText' style={{
-                    marginLeft: "5px",
-                    marginTop: "4px",
-                    marginBottom: "15px"
-                }}>New to Sky iD? <a className='forgotSign' href="#">Sign up</a></p>
-                <h2 style={{
-                    color: "rgb(5,52,123)",
-                    fontSize: "20px",
-                    fontWeight: "580",
-                    marginLeft: "5px",
-                    marginTop: "0px",
-                    marginBottom: "15px"
-                }}>Sign in</h2>
+                <hr className='mobileborder' />
+                <p className='signText newidmobile'>New to Sky iD? <a className='forgotSign' href="#">Sign up</a></p>
+                <h2 className='signintitle'>Sign in</h2>
                 {/* ERROR! */}
                 <div className='form-group'>
-                    <label htmlFor="name" className='signText' style={{
-                        fontWeight: "600",
-                        marginLeft: "-5px",
-                    }}>Email or Username</label><span className='break signUpbreak' />
+                    <label htmlFor="name" className='signText emailmob'>Email or Username</label><span className='break signUpbreak' />
                     <input
                         type="text"
                         name="username"
@@ -123,10 +103,7 @@ function Logmobile() {
                 </div>
 
                 <div className='form-group'>
-                    <label htmlFor="password" className='signText' style={{
-                        fontWeight: "600",
-                        marginLeft: "-5px"
-                    }}>Password</label><span className='break signUpbreak' />
+                    <label htmlFor="password" className='signText emailmob'>Password</label><span className='break signUpbreak' />
                     <input
                         type="password"
                         name="password"
@@ -143,20 +120,10 @@ function Logmobile() {
                     }
                 </div>
 
-                <p className='signText' style={{
-                    marginLeft: "5px",
-                    marginTop: "4px",
-                    marginBottom: "10px"
-                }}>Forgotten <a className='forgotSign' href='#'>username</a> or <a className='forgotSign' href='#'>password</a>?</p>
+                <p className='signText mobileforgot'>Forgotten <a className='forgotSign' href='#'>username</a> or <a className='forgotSign' href='#'>password</a>?</p>
 
-                <input type="checkbox" className='checkmark' /> <label className='signText' style={{
-                    fontSize: "16px"
-                }}>Remember my username</label><br />
-                <a className='forgotSign' href='#' style={{
-                    fontSize: "16px",
-                    padding: "3px",
-                    marginBottom: "10px"
-                }}>Privacy & Cookies Notice</a><br />
+                <input type="checkbox" className='checkmark' /> <label className='signText remembermobile'>Remember my username</label><br />
+                <a className='forgotSign privacymobile' href='#'>Privacy & Cookies Notice</a><br />
 
                 <button className='signInMobile' value="Sign in" onClick={handleValidation}> Sign in </button>
             </div>
