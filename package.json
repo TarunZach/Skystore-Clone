@@ -1,5 +1,5 @@
 {
-  "name": "skystore-clone",
+  "name": "skystore-git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -49,5 +49,5 @@
     ]
   },
   "keywords": [],
-  "description": "github"
+  "description": ""
 }
