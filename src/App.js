@@ -11,8 +11,8 @@ function App(props) {
       <div className="App">
         <Routes>
           <Route exact path='/' element={<MainPage />} />
-          <Route exact path='/signin' element={<LoginForm />} />
-          <Route exact path='/signup' element={<SignUpForm />} />
+          <Route path='/signin' element={<LoginForm />} />
+          <Route path='/signup' element={<SignUpForm />} />
         </Routes>
       </div>
     </BrowserRouter>
