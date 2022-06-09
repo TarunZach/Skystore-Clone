@@ -54,6 +54,26 @@ const Header = (props) => {
         setActive("under3");
     }
 
+    const handleUnder4 = () => {
+        setActive("under4");
+    }
+
+    const handleUnder5 = () => {
+        setActive("under5");
+    }
+
+    const handleSet = () => {
+        setActive("springset");
+    }
+
+    const handleTVSet = () => {
+        setActive("tvset");
+    }
+
+    const handleStartrek = () => {
+        setActive("startrek");
+    }
+
     useEffect(() => {
         console.log(active);
         props.onClick(active);
@@ -198,19 +218,12 @@ const Header = (props) => {
                                 </button>
                                 <div className="dropdown-content">
                                     <a className="anchor" onClick={handlePicks}>Store Picks</a>
-                                    <a className="anchor"onClick={handleUnder3}>Under £3</a>
-                                    <a className="anchor">Under £4</a>
-                                    <a className="anchor">Under £5</a>
-                                    <a className="anchor">Movie Box Sets</a>
-                                    <a className="anchor">TV Boxsets</a>
-                                    <a className="anchor" style={{
-                                        width: "170px",
-                                        height: "70px"
-                                    }}><p style={{
-                                        whiteSpace: "pre-line",
-                                        width: "180px",
-                                        height: "50px"
-                                    }}>Star Trek Wrath of Khan 40th Anniversary</p></a>
+                                    <a className="anchor" onClick={handleUnder3}>Under £3</a>
+                                    <a className="anchor" onClick={handleUnder4}>Under £4</a>
+                                    <a className="anchor" onClick={handleUnder5}>Under £5</a>
+                                    <a className="anchor" onClick={handleSet}>Movie Box Sets</a>
+                                    <a className="anchor" onClick={handleTVSet}>TV Boxsets</a>
+                                    <a className="anchor fold" onClick={handleStartrek}><p  className= 'foldtext'>Star Trek Wrath of Khan 40th Anniversary</p></a>
                                 </div>
                             </li>
                             <li className="dropdown-item dropdown vip">

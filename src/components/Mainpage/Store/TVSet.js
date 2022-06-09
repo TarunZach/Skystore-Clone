@@ -4,11 +4,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../css/mainpage.css';
 import { Button } from 'react-bootstrap';
 
-function Under3() {
-    const max = 200;
+function TVSet() {
+    const max = 100;
 
     const [data, getData] = useState([]);
-    const [limit, setLimit] = useState(100);
+    const [limit, setLimit] = useState(40);
 
     const goTop = () => {
         window.scrollTo({
@@ -41,11 +41,11 @@ function Under3() {
 
     return (
         <>
-            <h1>Under £3</h1>
+            <h1>TV Boxsets</h1>
             <Container>
                 <Row>
                     {
-                        data.slice(70, limit).map((img, key) => {
+                        data.slice(10, limit).map((img, key) => {
                             return (
                                 <div className="card-wrapper" key={key}>
                                     <a href="" className="card-content">
@@ -76,4 +76,4 @@ function Under3() {
         </>
     );
 }
-export default Under3
+export default TVSet
