@@ -544,6 +544,14 @@ p {
   display: none;
 }
 
+.button-wrapper a {
+  display: none;
+}
+
+.buybutton {
+  margin: auto auto 60px auto !important;
+}
+
 /*---*/
 
 .headerWrapper {
