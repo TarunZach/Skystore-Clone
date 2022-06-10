@@ -538,19 +538,17 @@ p {
         display: block;
         margin-top: 0px;
     } */
+
+    .button-wrapper a{
+      display: none;
+    }
 }
 
 .searchinputMobile {
   display: none;
 }
 
-.button-wrapper a {
-  display: none;
-}
 
-.buybutton {
-  margin: auto auto 60px auto !important;
-}
 
 /*---*/
 
