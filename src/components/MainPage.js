@@ -21,6 +21,7 @@ import Under4 from "./Mainpage/Store/Under4";
 import Under5 from "./Mainpage/Store/Under5";
 import SpringSet from "./Mainpage/Store/SpringSet";
 import TVSet from "./Mainpage/Store/TVSet";
+import Startrek from "./Mainpage/Store/Startrek";
 
 const MainPage = () => {
   const [active, setActive] = useState("home");
@@ -270,6 +271,16 @@ const MainPage = () => {
               <div className="card container rent">
                 <section>
                   <TVSet />
+                </section>
+              </div>
+            </>
+          )}
+
+          {active === "startrek" && (
+            <>
+              <div className="card container rent">
+                <section>
+                  <Startrek />
                 </section>
               </div>
             </>
