@@ -39,12 +39,13 @@ function PreOrder() {
 
     return (
         <>
-            <h1>Pre-Order</h1>
-            <Container>
-                <Row>
-                    {
-                        loading ? <LoadingSpinner /> :
-                            <>
+            {
+                loading ? <LoadingSpinner /> :
+                    <>
+                        <h1>Pre-Order</h1>
+                        <Container>
+                            <Row>
+
                                 {
                                     data.slice(50, 62).map((img, key) => {
                                         return (
@@ -64,10 +65,10 @@ function PreOrder() {
                                         );
                                     })
                                 }
-                            </>
-                    }
-                </Row>
-            </Container>
+                            </Row>
+                        </Container>
+                    </>
+            }
         </>
     );
 }

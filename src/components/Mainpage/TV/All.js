@@ -4,12 +4,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../css/mainpage.css';
 import { Button } from 'react-bootstrap';
 import LoadingSpinner from '../LoadingSpinner';
+import MovieBoxSpotlight from '../menu/MovieBoxSpotlight';
 
-function Under3() {
-    const max = 200;
+function All() {
+    const max = 100;
 
     const [data, getData] = useState([]);
-    const [limit, setLimit] = useState(100);
+    const [limit, setLimit] = useState(30);
     const [loading, setLoading] = useState(false);
 
     const goTop = () => {
@@ -50,31 +51,41 @@ function Under3() {
             {
                 loading ? <LoadingSpinner /> :
                     <>
-                        <h1>Under £3</h1>
-                        <Container>
-                            <Row>
 
-                                {
-                                    data.slice(70, limit).map((img, key) => {
-                                        return (
-                                            <div className="card-wrapper" key={key}>
-                                                <a href="" className="card-content">
+                        <div className="carouselItem">
+                            <MovieBoxSpotlight />
+                        </div>
+                        <div className="gradient"></div>
+                        <div className="card container">
+                            <section>
+                                <h1>All</h1>
+                                <Container>
+                                    <Row>
 
-                                                    <div className="image-container">
-                                                        <img
-                                                            src={img.image.original}
-                                                            alt=""
-                                                            className='cardimg' />
+                                        {
+                                            data.slice(0, limit).map((img, key) => {
+                                                return (
+                                                    <div className="card-wrapper" key={key}>
+                                                        <a href="" className="card-content">
+
+                                                            <div className="image-container">
+                                                                <img
+                                                                    src={img.image.original}
+                                                                    alt=""
+                                                                    className='cardimg' />
+                                                            </div>
+                                                            <p className="movieTitle">{img.name}</p>
+                                                        </a>
                                                     </div>
-                                                    <p className="movieTitle">{img.name}</p>
-                                                </a>
-                                            </div>
 
-                                        );
-                                    })
-                                }
-                            </Row>
-                        </Container>
+                                                );
+                                            })
+                                        }
+
+                                    </Row>
+                                </Container>
+                            </section>
+                        </div>
                         <div className="button-wrapper">
                             <div className="button">
                                 <Button variant="primary" className='buybutton' onClick={handleLimit}>Show More</Button>
@@ -88,4 +99,4 @@ function Under3() {
         </>
     );
 }
-export default Under3
+export default All

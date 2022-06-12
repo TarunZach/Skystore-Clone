@@ -74,6 +74,30 @@ const Header = (props) => {
         setActive("startrek");
     }
 
+    const handlePopular = () => {
+        setActive("popular");
+    }
+
+    const handleNewStore = () => {
+        setActive("newstore");
+    }
+
+    const handleDrama = () => {
+        setActive("drama");
+    }
+
+    const handleComedy = () => {
+        setActive("comedy");
+    }
+
+    const handleKids = () => {
+        setActive("kids");
+    }
+
+    const handleAll = () => {
+        setActive("all");
+    }
+
     useEffect(() => {
         console.log(active);
         props.onClick(active);
@@ -249,12 +273,12 @@ const Header = (props) => {
                                     </svg></span>
                                 </button>
                                 <div className="dropdown-content">
-                                    <a href="" className="anchor">Most Popular</a>
-                                    <a href="" className="anchor">New To Store</a>
-                                    <a href="" className="anchor">Drama</a>
-                                    <a href="" className="anchor">Comedy</a>
-                                    <a href="" className="anchor">Kids</a>
-                                    <a href="" className="anchor">All</a>
+                                    <a className="anchor" onClick={handlePopular}>Most Popular</a>
+                                    <a className="anchor" onClick={handleNewStore}>New To Store</a>
+                                    <a className="anchor" onClick={handleDrama}>Drama</a>
+                                    <a className="anchor" onClick={handleComedy}>Comedy</a>
+                                    <a className="anchor" onClick={handleKids}>Kids</a>
+                                    <a className="anchor" onClick={handleAll}>All</a>
                                 </div>
                             </li>
                             <li className="dropdown-item redeem">

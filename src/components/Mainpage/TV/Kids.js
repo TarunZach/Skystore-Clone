@@ -5,11 +5,11 @@ import '../css/mainpage.css';
 import { Button } from 'react-bootstrap';
 import LoadingSpinner from '../LoadingSpinner';
 
-function Under3() {
+function Kids() {
     const max = 200;
 
     const [data, getData] = useState([]);
-    const [limit, setLimit] = useState(100);
+    const [limit, setLimit] = useState(70);
     const [loading, setLoading] = useState(false);
 
     const goTop = () => {
@@ -50,12 +50,12 @@ function Under3() {
             {
                 loading ? <LoadingSpinner /> :
                     <>
-                        <h1>Under £3</h1>
+                        <h1>Kids</h1>
                         <Container>
                             <Row>
 
                                 {
-                                    data.slice(70, limit).map((img, key) => {
+                                    data.slice(52, limit).map((img, key) => {
                                         return (
                                             <div className="card-wrapper" key={key}>
                                                 <a href="" className="card-content">
@@ -73,6 +73,7 @@ function Under3() {
                                         );
                                     })
                                 }
+
                             </Row>
                         </Container>
                         <div className="button-wrapper">
@@ -88,4 +89,4 @@ function Under3() {
         </>
     );
 }
-export default Under3
+export default Kids

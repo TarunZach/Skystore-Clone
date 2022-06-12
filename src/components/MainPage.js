@@ -22,6 +22,13 @@ import Under5 from "./Mainpage/Store/Under5";
 import SpringSet from "./Mainpage/Store/SpringSet";
 import TVSet from "./Mainpage/Store/TVSet";
 import Startrek from "./Mainpage/Store/Startrek";
+/*TV*/
+import All from "./Mainpage/TV/All";
+import Comedy from "./Mainpage/TV/Comedy";
+import Drama from "./Mainpage/TV/Drama";
+import Kids from "./Mainpage/TV/Kids";
+import NewStore from "./Mainpage/TV/NewStore";
+import Popular from "./Mainpage/TV/Popular";
 
 const MainPage = () => {
   const [active, setActive] = useState("home");
@@ -281,6 +288,62 @@ const MainPage = () => {
               <div className="card container rent">
                 <section>
                   <Startrek />
+                </section>
+              </div>
+            </>
+          )}
+
+          {active === "all" && (
+            <>
+              <All />
+            </>
+          )}
+
+          {active === "comedy" && (
+            <>
+              <div className="card container rent">
+                <section>
+                  <Comedy />
+                </section>
+              </div>
+            </>
+          )}
+
+          {active === "drama" && (
+            <>
+              <div className="card container rent">
+                <section>
+                  <Drama />
+                </section>
+              </div>
+            </>
+          )}
+
+          {active === "kids" && (
+            <>
+              <div className="card container rent">
+                <section>
+                  <Kids />
+                </section>
+              </div>
+            </>
+          )}
+
+          {active === "newstore" && (
+            <>
+              <div className="card container rent">
+                <section>
+                  <NewStore />
+                </section>
+              </div>
+            </>
+          )}
+
+          {active === "popular" && (
+            <>
+              <div className="card container rent">
+                <section>
+                  <Popular />
                 </section>
               </div>
             </>
