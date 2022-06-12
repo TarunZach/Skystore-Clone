@@ -1148,3 +1148,7 @@ li a {
   width: 185px;
   margin: auto auto 60px 95px;
 }
+
+.nobutton{
+  margin-left: auto;
+}
