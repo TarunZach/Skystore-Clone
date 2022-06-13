@@ -98,6 +98,14 @@ const Header = (props) => {
         setActive("all");
     }
 
+    const handleVoucher = () => {
+        setActive("voucher");
+    }
+
+    const handleGift = () => {
+        setActive("gift");
+    }
+
     useEffect(() => {
         console.log(active);
         props.onClick(active);
@@ -258,7 +266,7 @@ const Header = (props) => {
                                     </svg></span>
                                 </button>
                                 <div className="dropdown-content">
-                                    <a href="" className="anchor">Sky VIP Gift</a>
+                                    <a className="anchor" onClick={handleGift}>Sky VIP Gift</a>
                                 </div>
                             </li>
                             <li className="dropdown-item dropdown" style={{
@@ -282,7 +290,7 @@ const Header = (props) => {
                                 </div>
                             </li>
                             <li className="dropdown-item redeem">
-                                <button className="dropbtn redeembtn">
+                                <button className="dropbtn redeembtn" onClick={handleVoucher}>
                                     Redeem Voucher
                                 </button>
                             </li>

@@ -29,6 +29,8 @@ import Drama from "./Mainpage/TV/Drama";
 import Kids from "./Mainpage/TV/Kids";
 import NewStore from "./Mainpage/TV/NewStore";
 import Popular from "./Mainpage/TV/Popular";
+import Gift from "./Mainpage/Gift";
+import Voucher from "./Mainpage/Voucher";
 
 const MainPage = () => {
   const [active, setActive] = useState("home");
@@ -346,6 +348,20 @@ const MainPage = () => {
                   <Popular />
                 </section>
               </div>
+            </>
+          )}
+          {active === "gift" && (
+            <>
+              <div className="card container rent">
+                <section>
+                  <Gift />
+                </section>
+              </div>
+            </>
+          )}
+          {active === "voucher" && (
+            <>
+              <Voucher />
             </>
           )}
         </div>
