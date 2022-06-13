@@ -11,6 +11,7 @@ function Buy() {
     const [data, getData] = useState([]);
     const [limit, setLimit] = useState(30);
     const [loading, setLoading] = useState(false);
+    const [count, setCount] = useState(0);
 
     const goTop = () => {
         window.scrollTo({
@@ -26,7 +27,10 @@ function Buy() {
     }, [limit])
 
     const fetchData = () => {
-        setLoading(true);
+        if (count === 0) {
+            setLoading(true);
+        }
+
         fetch('https://api.tvmaze.com/shows?_limit=30')
             .then((res) =>
                 res.json())
@@ -36,6 +40,7 @@ function Buy() {
                 setTimeout(() => {
                     getData(response);
                     setLoading(false);
+                    setCount(count + 1);
                 }, 1500);
             })
     };

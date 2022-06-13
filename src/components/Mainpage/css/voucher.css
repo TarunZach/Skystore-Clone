@@ -1,0 +1,221 @@
+.redeem-wrapper {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.redeem-section {
+    justify-content: center;
+    max-width: unset;
+}
+
+.redeem-content {
+    width: 100%;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.img-wrapper {
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.voucherbg {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    height: auto;
+}
+
+.mainvoucher {
+    position: relative;
+}
+
+.voucher-wrapper {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.redeem-title {
+    font-size: 2.9rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+
+.redeem-text {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+.input-wrapper {
+    display: flex;
+    margin-top: 50px;
+}
+
+.redeem-input:placeholder-shown {
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: 'Sky Text';
+}
+
+.redeem-input {
+    border: 3px solid transparent;
+    border-radius: 3px;
+    font-family: 'Courier New';
+    font-size: 18px;
+    height: 45px;
+    width: 300px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+.redeembutton {
+    width: 135px;
+    height: 45px;
+    margin-left: 25px;
+}
+
+.vouchertext-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin-top: -20px;
+    justify-content: center;
+    max-width: 680px;
+    margin: auto;
+}
+
+.voucher-item {
+    max-width: 680px;
+}
+
+.voucher-text {
+    max-width: 680px;
+    font-size: 21px;
+    margin: 0 auto 6px;
+}
+
+.voucher-para p {
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.faq-link {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.faq-link a:hover {
+    color: #f4ce24;
+}
+
+.require-link {
+    color: #a3b2c4;
+    font-size: 16px;
+}
+
+.require-link a:hover {
+    color: #f4ce24;
+}
+
+.termbtn-wrapper {
+    width: 100%;
+    max-width: 1090px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.termsbutton {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    background-color: rgba(120, 182, 250, .05) !important;
+    border: transparent;
+    border-radius: 3px 0px;
+}
+
+.collapse-text {
+    background-color: rgba(120, 182, 250, .05);
+    margin-top: -60px;
+    border-radius: 0px 3px;
+    padding-left: 12px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.termtext {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.third-tc {
+    padding-bottom: 20px;
+}
+
+.collapse-text ol {
+    padding-right: 20px;
+}
+
+.collapse-text li {
+    color: #a3b2c4;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.collapse-text li:last-child {
+    padding-bottom: 15px;
+}
+
+.cond-link {
+    color: #78b6fa;
+}
+
+.cond-link:hover {
+    color: #f4ce24;
+}
+
+@media (max-width: 600px) {
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .redeem-input {
+        width: 100%;
+    }
+
+    .redeembutton {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .redeem-title {
+        font-size: 1.875rem;
+    }
+
+    .redeem-text {
+        font-size: 14px;
+    }
+
+    .redeembutton {
+        margin-left: 0px;
+    }
+}

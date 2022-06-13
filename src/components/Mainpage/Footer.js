@@ -7,12 +7,6 @@ function Footer() {
     return (
         <footer className="mainfooter">
             <div className="bottom-footer container">
-                <div className="app-footer">
-                    <p className="appText">Get the Sky Store mobile app: </p>
-                    <a href="">
-                        <img src="https://www.skystore.com/assets/img/store-icon/android-en.svg" alt="" className="gplayimg" width="130px" />
-                    </a>
-                </div>
                 <nav className="toplink">
                     <ul className="footernav">
                         <li className="footerlink">

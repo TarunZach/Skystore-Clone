@@ -364,10 +364,11 @@ const MainPage = () => {
               <Voucher />
             </>
           )}
+
+          <div className="footer-wrapper">
+            <Footer />
+          </div>
         </div>
-      </div>
-      <div className="footer-wrapper">
-        <Footer />
       </div>
     </div>
   );
