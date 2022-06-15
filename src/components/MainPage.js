@@ -31,10 +31,15 @@ import NewStore from "./Mainpage/TV/NewStore";
 import Popular from "./Mainpage/TV/Popular";
 import Gift from "./Mainpage/Gift";
 import Voucher from "./Mainpage/Voucher";
+import Description from "./Mainpage/Description/Description";
 
 const MainPage = () => {
   const [active, setActive] = useState("home");
   const getData = (data) => {
+    setActive(data);
+  };
+
+  const getDataCard = (data) => {
     setActive(data);
   };
 
@@ -63,7 +68,7 @@ const MainPage = () => {
               <div className="gradient"></div>
               <div className="card container">
                 <section>
-                  <Moviecard />
+                  <Moviecard onClick={getDataCard} />
                 </section>
                 <div className="button-wrapper">
                   <div className="button">
@@ -88,6 +93,15 @@ const MainPage = () => {
                     Back to top
                   </a>
                 </div>
+              </div>
+            </>
+          )}
+          {active === "description" && (
+            <>
+              <div className="card container rent">
+                <section>
+                  <Description />
+                </section>
               </div>
             </>
           )}

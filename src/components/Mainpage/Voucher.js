@@ -46,7 +46,14 @@ function Voucher() {
                                         onClick={() => setOpen(!open)}
                                         aria-controls="example-collapse-text"
                                         aria-expanded={open}
-                                    >Terms and Conditions for Sky Store Vouchers</Button>
+                                    > <div className="arrow-wrapper">
+                                            <p>Terms and Conditions for Sky Store Vouchers</p>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#78b6fa" class="bi bi-chevron-down terms-arrow" viewBox="0 0 16 16">
+                                                <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                            </svg>
+                                        </div>
+                                    </Button>
                                     <Collapse in={open}>
                                         <div id="example-collapse-text" className='collapse-text'>
                                             <p className='termtext first-tc'>These Terms and Conditions were last updated in May 2017 in relation to clause 3 by adding a new voucher type.</p>

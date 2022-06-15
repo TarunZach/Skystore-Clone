@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import './css/mainpage.css';
 import image from '../storage/images.json'
 
-function Moviecard() {
+function Moviecard(props) {
+    const [activeMovie, setActiveMovie] = useState("home");
+
+    const handleHomeCard = () => {
+        setActiveMovie("description");
+    }
+
+    useEffect(() => {
+        console.log(activeMovie);
+        props.onClick(activeMovie);
+    })
 
     return (
         <>
@@ -18,7 +28,7 @@ function Moviecard() {
                                     image.images.map((img, key) => {
                                         return (
                                             <div className="card-wrapper" key={key}>
-                                                <a href="" className="card-content">
+                                                <a className="card-content" onClick={handleHomeCard}>
 
                                                     <div className="image-container">
                                                         <img

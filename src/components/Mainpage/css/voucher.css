@@ -145,12 +145,28 @@
 
 .termsbutton {
     width: 100%;
+    height: 50px;
     text-align: left;
     font-size: 1rem;
     background-color: rgba(120, 182, 250, .05) !important;
     border: transparent;
     border-radius: 3px 0px;
 }
+
+.arrow-wrapper{
+    display: flex;
+    margin: auto;
+}
+
+.arrow-wrapper p{
+    margin-bottom: 0px;
+}
+
+.terms-arrow{
+    margin-left: auto;
+    margin-top: 5px;
+}
+
 
 .collapse-text {
     background-color: rgba(120, 182, 250, .05);

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './css/mainpage.css';
 
 
 const Header = (props) => {
     let history = useNavigate();
     const [show, setShow] = useState(false);
-    const [active, setActive] = useState("home");
+    const [active, setActive] = useState();
 
 
     const handleOnClick = () => {
@@ -123,11 +123,8 @@ const Header = (props) => {
                         <ul id="menu">
                             <a className='active' onClick={handleHome}><li>Home</li></a>
                             <hr className='sideNav' />
-                            <a onClick={() =>
-                                history('/signin')}> <li>Sign In</li></a>
-                            <a onClick={() =>
-                                history('/signup')
-                            }><li>Sign Up</li></a>
+                            <Link to='/signin'> <li>Sign In</li></Link>
+                            <Link to='/signup'><li>Sign Up</li></Link>
                             <hr className='sideNav' />
                             <a><li>Movies</li></a>
                             <a><li>Sky Store Premiere</li></a>
@@ -149,18 +146,14 @@ const Header = (props) => {
                             <nav className='user-menu'>
                                 <ul className="loginmenu">
                                     <li className="menu-item firstitem">
-                                        <a className="anchor" onClick={() =>
-                                            history('/signin')
-                                        }>
+                                        <Link className="anchor" to='/signin'>
                                             <span className="text">Sign In</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="menu-item">
-                                        <a className="anchor" onClick={() =>
-                                            history('/signup')
-                                        }>
+                                        <Link className="anchor" to='/signup'>
                                             <span className="text">Sign Up</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </nav>
