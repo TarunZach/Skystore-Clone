@@ -44,36 +44,40 @@ function PreOrder() {
 
     return (
         <>
-            {
-                loading ? <LoadingSpinner /> :
-                    <>
-                        <h1>Pre-Order</h1>
-                        <Container>
-                            <Row>
+            <div className="card container rent">
+                <section>
+                    {
+                        loading ? <LoadingSpinner /> :
+                            <>
+                                <h1>Pre-Order</h1>
+                                <Container>
+                                    <Row>
 
-                                {
-                                    data.slice(50, 62).map((img, key) => {
-                                        return (
-                                            <div className="card-wrapper" key={key}>
-                                                <a href="" className="card-content">
+                                        {
+                                            data.slice(50, 62).map((img, key) => {
+                                                return (
+                                                    <div className="card-wrapper" key={key}>
+                                                        <a href="" className="card-content">
 
-                                                    <div className="image-container">
-                                                        <img
-                                                            src={img.image.original}
-                                                            alt=""
-                                                            className='cardimg' />
+                                                            <div className="image-container">
+                                                                <img
+                                                                    src={img.image.original}
+                                                                    alt=""
+                                                                    className='cardimg' />
+                                                            </div>
+                                                            <p className="movieTitle">{img.name}</p>
+                                                        </a>
                                                     </div>
-                                                    <p className="movieTitle">{img.name}</p>
-                                                </a>
-                                            </div>
 
-                                        );
-                                    })
-                                }
-                            </Row>
-                        </Container>
-                    </>
-            }
+                                                );
+                                            })
+                                        }
+                                    </Row>
+                                </Container>
+                            </>
+                    }
+                </section>
+            </div>
         </>
     );
 }

@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../css/mainpage.css';
 import { Button } from 'react-bootstrap';
 import LoadingSpinner from '../LoadingSpinner';
-import MovieBoxSpotlight from '../menu/MovieBoxSpotlight';
+import MovieBoxSpotlight from '../menu/MovieBox/MovieBoxSpotlight';
 
 function All() {
     const max = 100;

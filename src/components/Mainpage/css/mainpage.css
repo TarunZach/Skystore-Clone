@@ -66,7 +66,7 @@ p {
 
   .dropbtnlong {
     width: 140px !important;
-    white-space: pre-line;
+    white-space: nowrap;
   }
 
   .springSale {
@@ -790,6 +790,7 @@ li a {
   height: 55px;
 }
 
+
 .dropbtn:hover {
   color: #f4ce24;
   background-color: #0c2039;
@@ -839,6 +840,18 @@ li a {
   height: 50px;
 }
 
+.homebtn{
+  padding: 16px;
+}
+
+.prembtn{
+  padding: 16px;
+  width: 207px !important;
+  white-space: nowrap;
+}
+
+
+
 /*---*/
 
 /*Carousel*/
@@ -858,6 +871,14 @@ li a {
   max-width: 1600px !important;
   height: 100%;
   margin: auto;
+}
+
+.carousel-control-next {
+  opacity: .1;
+}
+
+.carousel-control-prev {
+  opacity: .1;
 }
 
 .carousel-control-prev-icon {
@@ -903,6 +924,7 @@ li a {
   z-index: 50;
   bottom: 11rem;
   justify-content: flex-end;
+  opacity: 0.5 !important;
 }
 
 .carousel-indicators button {
@@ -911,6 +933,7 @@ li a {
   min-width: 8px !important;
   border: 1px solid white !important;
   border-radius: 15px !important;
+  margin-right: 8px !important;
 }
 
 /*---*/
@@ -1159,6 +1182,21 @@ li a {
 
 .button-wrapper {
   display: flex;
+}
+
+@media (max-width: 600px) {
+  .button-wrapper{
+    flex-direction: column;
+  }
+
+  .button-wrapper a{
+    justify-content: center;
+    margin: 15px auto 20px auto;
+  }
+
+  .buybutton{
+    margin: auto !important;
+  }
 }
 
 .button {
