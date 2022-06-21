@@ -35,12 +35,21 @@ function App(props) {
         <Routes>
           <Route exact path='/' element={<MainPage />}>
             <Route index element={<Home />} />
+
+            <Route path='/description/:id' element={<Description />} />
+
+            {/* Movies Tab */}
             <Route path='/rent' element={<Rent />} />
             <Route path='/buy' element={<Buy />} />
             <Route path='/preorder' element={<PreOrder />} />
             <Route path='/moviebox' element={<MovieBox />} />
             <Route path='/bond' element={<Bond />} />
+            {/* End Movies Tab */}
+
+
             <Route path='/prem' element={<Premiere />} />
+
+            {/* Sale Tab */}
             <Route path='/picks' element={<Picks />} />
             <Route path='/under3' element={<Under3 />} />
             <Route path='/under4' element={<Under4 />} />
@@ -49,14 +58,24 @@ function App(props) {
             <Route path='/tvset' element={<TVSet />} />
             <Route path='/set' element={<SpringSet />} />
             <Route path='/startrek' element={<Startrek />} />
+            {/* End Sale Tab */}
+
+
             <Route path='/gift' element={<Gift />} />
+
+            {/* TV Tab */}
             <Route path='/popular' element={<Popular />} />
             <Route path='/newstore' element={<NewStore />} />
             <Route path='/drama' element={<Drama />} />
             <Route path='/comedy' element={<Comedy />} />
             <Route path='/kids' element={<Kids />} />
             <Route path='/all' element={<All />} />
+            {/* End TV Tab */}
+
+
             <Route path='/redeem' element={<Voucher />} />
+
+            
           </Route>
           <Route path='/signin' element={<LoginForm />} />
           <Route path='/signup' element={<SignUpForm />} />

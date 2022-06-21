@@ -27,10 +27,10 @@ function All() {
     }, [limit])
 
     const fetchData = () => {
-        if(count===0){
+        if (count === 0) {
             setLoading(true);
         }
-        
+
         fetch('https://api.tvmaze.com/shows?_limit=30')
             .then((res) =>
                 res.json())
@@ -40,7 +40,7 @@ function All() {
                 setTimeout(() => {
                     getData(response);
                     setLoading(false);
-                    setCount(count+1);
+                    setCount(count + 1);
                 }, 1500);
             })
     };
@@ -95,8 +95,18 @@ function All() {
                             <div className="button">
                                 <Button variant="primary" className='buybutton' onClick={handleLimit}>Show More</Button>
                             </div>
-                            <a onClick={goTop}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
+                            <a onClick={goTop}><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-chevron-compact-up goToplogo"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"
+                                />
                             </svg> Back to top</a>
                         </div>
                     </>

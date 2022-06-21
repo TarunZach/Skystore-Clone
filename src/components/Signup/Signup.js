@@ -425,7 +425,7 @@ function Signup() {
         <a
           href="#"
           className="supforgotSign forgotSign"
-          onClick={() => history("/signin")}
+          onClick={() => history(-1)}
         >
           Cancel
         </a>
@@ -441,7 +441,7 @@ function Signup() {
           id="cancelButtonMobile"
           className="signIn supCancel"
           type="button"
-          onClick={() => history("/signin")}
+          onClick={() => history(-1)}
         >
           Cancel
         </button>

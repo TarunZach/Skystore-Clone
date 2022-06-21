@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './css/mainpage.css';
-import image from '../storage/images.json'
 import LoadingSpinner from './LoadingSpinner';
 import Spotlight from './Spotlight';
 
@@ -69,16 +68,18 @@ function Moviecard(props) {
                                             data.slice(0, limit).map((img, key) => {
                                                 return (
                                                     <div className="card-wrapper" key={key}>
-                                                        <a href="" className="card-content">
+                                                        <Link to={'description/'+img.id}>
+                                                            <a className="card-content">
 
-                                                            <div className="image-container">
-                                                                <img
-                                                                    src={img.image.original}
-                                                                    alt=""
-                                                                    className='cardimg' />
-                                                            </div>
-                                                            <p className="movieTitle">{img.name}</p>
-                                                        </a>
+                                                                <div className="image-container">
+                                                                    <img
+                                                                        src={img.image.original}
+                                                                        alt=""
+                                                                        className='cardimg' />
+                                                                </div>
+                                                                <p className="movieTitle">{img.name}</p>
+                                                            </a>
+                                                        </Link>
                                                     </div>
 
                                                 );

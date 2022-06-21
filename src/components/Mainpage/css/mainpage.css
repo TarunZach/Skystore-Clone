@@ -1216,6 +1216,11 @@ li a {
   color: #78b6fa !important;
 }
 
+.button-wrapper a svg{
+  border: 1px solid #78b6fa;
+  border-radius: 50%;
+}
+
 .button-wrapper a:hover {
   color: #f4ce24 !important;
 }
