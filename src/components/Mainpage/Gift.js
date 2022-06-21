@@ -15,8 +15,7 @@ function Gift() {
 
     const goTop = () => {
         window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
+            top: 0
         });
     };
 

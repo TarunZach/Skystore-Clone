@@ -37,12 +37,13 @@
 }
 
 .img-container{
-    width: 100%;
+    width: 255px;
     height: 100%;
+    margin: auto;
 }
 
 .product-container{
-    width: 65%;
+    max-width: 100%;
     position: relative;
     justify-content: flex-start;
 }

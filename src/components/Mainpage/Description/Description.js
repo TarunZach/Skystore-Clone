@@ -8,13 +8,13 @@ function Description(props) {
     const { id } = useParams();
     console.log(id);
     const [loading, setLoading] = useState(false);
+    var regex = /(<([^>]+)>)/ig;
     const [data, getData] = useState([]);
 
-    var regex = /(<([^>]+)>)/ig
 
     useEffect(() => {
         fetchData();
-    }, [])
+    },[])
 
     const fetchData = () => {
 
@@ -23,20 +23,20 @@ function Description(props) {
                 res.json())
 
             .then((response) => {
+                console.log(response);
                 response.forEach(element => {
                     if (element.id === parseInt(id)) {
                         getData(element);
-                        console.log("ok", element)
+                        console.log(element);
                     }
                 });
             })
     };
 
-
     return (
         <>
             {
-                data ?
+                data.length != 0 ?
 
                     <div className="detail-wrapper">
                         <section>
@@ -47,6 +47,7 @@ function Description(props) {
                                 <div className="product-container">
                                     <div className="img-container">
                                         <img src={data.image.original} alt="" className='product-image' />
+                                        {/* <img src="https://images.store.sky.com/api/img/asset/en/66D8BB8A-E4E8-4422-9242-603110084545_B327FD95-7B5A-46F0-BB17-F40B6831E9A4_2022-6-15-T9-39-21.jpg?s=260x371" alt="" className='product-image' /> */}
                                     </div>
                                 </div>
 
@@ -58,7 +59,7 @@ function Description(props) {
                                     </ul>
 
                                     <div className="description-para">
-                                        <p>{(data.summary).replace(regex,"")}</p>
+                                        <p>{(data.summary).replace(regex, "")}</p>
                                     </div>
 
                                     <div className="info">
@@ -87,12 +88,14 @@ function Description(props) {
 
                                             <div className="anchor-wrapper">
                                                 {
-                                                    (data.genre).map((anchor, key)=> {
-                                                        return(
+                                                    (data.genres).map((anchor, key) => {
+                                                        return (
                                                             <a key={key}>{anchor}</a>
                                                         )
                                                     })
                                                 }
+
+                                                {/* <a>test</a> */}
                                             </div>
                                         </div>
                                     </div>
