@@ -565,6 +565,10 @@ p {
     margin-right: 50px !important;
     padding: 20px !important;
   }
+
+  .letter{
+    width: 11.11% !important;
+  }
 }
 
 
@@ -1123,6 +1127,10 @@ li a {
     width: 100%;
     max-width: 900px !important;
   }
+
+  .letter{
+    width: 7.14% !important;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 700px) {
@@ -1238,4 +1246,29 @@ li a {
 
 .nobutton {
   margin-left: auto;
+}
+
+/*Letters*/
+.letter-row{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.letter{
+  width: 3.7%;
+  margin: 5px 0;
+  text-align: center;
+}
+
+
+.letter a{
+  color: #78b6fa !important;
+  display: block;
+  padding: 5px 0;
+  margin: 0 1px;
+  background-color: rgba(120,182,250,.05);
+  transition: background-color .3s cubic-bezier(.4,0,.2,1),color .3s cubic-bezier(.4,0,.2,1);
 }

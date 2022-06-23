@@ -128,13 +128,13 @@ const Header = (props) => {
                                 <Link to='/signin'> <li>Sign In</li></Link>
                                 <Link to='/signup'><li>Sign Up</li></Link>
                                 <hr className='sideNav' />
-                                <a><li>Movies</li></a>
-                                <a><li>Sky Store Premiere</li></a>
-                                <a><li>Spring Sale</li></a>
-                                <a><li>Sky VIP</li></a>
-                                <a><li>TV</li></a>
+                                <Link to='rent'><li>Movies</li></Link>
+                                <Link to='prem'><li>Sky Store Premiere</li></Link>
+                                <Link to='picks'><li>Spring Sale</li></Link>
+                                <Link to='gift'><li>Sky VIP</li></Link>
+                                <Link to='popular'><li>TV</li></Link>
                                 <hr className='sideNav' />
-                                <a><li>Redeem Voucher</li></a>
+                                <Link to='redeem'><li>Redeem Voucher</li></Link>
                             </ul>
                         </div>
                         <span className='browseText'>Browse</span>
@@ -227,9 +227,9 @@ const Header = (props) => {
                                         <Link className="anchor" to='preorder'>Pre-Order</Link>
                                         <Link className="anchor" to='moviebox'>Movie Box Sets</Link>
                                         <Link className="anchor" to='bond'>Bond Collection</Link>
-                                        <a className="anchor">Official Film Chart</a>
+                                        <Link className="anchor" to='filmchart'>Official Film Chart</Link>
                                         <a className="anchor">Browse</a>
-                                        <a className="anchor">A to Z</a>
+                                        <Link className="anchor" to='atoz'>A to Z</Link>
                                     </div>
                                 </li>
                                 <li className="dropdown-item skyStoreitem" style={{

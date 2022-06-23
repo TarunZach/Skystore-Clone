@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../css/mainpage.css';
 import LoadingSpinner from '../LoadingSpinner';
 
 function PreOrder() {
+    let history = useNavigate();
     const max = 100;
 
     const [data, getData] = useState([]);
@@ -57,16 +58,16 @@ function PreOrder() {
                                             data.slice(50, 62).map((img, key) => {
                                                 return (
                                                     <div className="card-wrapper" key={key}>
-                                                        <a href="" className="card-content">
+                                                            <a onClick={()=> {history('/description/'+img.id)}} className="card-content">
 
-                                                            <div className="image-container">
-                                                                <img
-                                                                    src={img.image.original}
-                                                                    alt=""
-                                                                    className='cardimg' />
-                                                            </div>
-                                                            <p className="movieTitle">{img.name}</p>
-                                                        </a>
+                                                                <div className="image-container">
+                                                                    <img
+                                                                        src={img.image.original}
+                                                                        alt=""
+                                                                        className='cardimg' />
+                                                                </div>
+                                                                <p className="movieTitle">{img.name}</p>
+                                                            </a>
                                                     </div>
 
                                                 );

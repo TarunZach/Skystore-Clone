@@ -5,12 +5,12 @@ import '../css/mainpage.css';
 import { Button } from 'react-bootstrap';
 import LoadingSpinner from '../LoadingSpinner';
 
-function Under5() {
+function AtoZ() {
     let history = useNavigate();
-    const max = 240;
+    const max = 230;
 
     const [data, getData] = useState([]);
-    const [limit, setLimit] = useState(170);
+    const [limit, setLimit] = useState(60);
     const [loading, setLoading] = useState(false);
     const [count, setCount] = useState(0);
 
@@ -58,15 +58,44 @@ function Under5() {
                     <>
                         <div className="card container rent">
                             <section>
-                                <h1>Under £5</h1>
+                                <h1>A to Z</h1>
+                                <div className="letter-row">
+                                    <div className="letter"><a>0-9</a></div>
+                                    <div className="letter"><a>A</a></div>
+                                    <div className="letter"><a>B</a></div>
+                                    <div className="letter"><a>C</a></div>
+                                    <div className="letter"><a>D</a></div>
+                                    <div className="letter"><a>E</a></div>
+                                    <div className="letter"><a>F</a></div>
+                                    <div className="letter"><a>G</a></div>
+                                    <div className="letter"><a>H</a></div>
+                                    <div className="letter"><a>I</a></div>
+                                    <div className="letter"><a>J</a></div>
+                                    <div className="letter"><a>K</a></div>
+                                    <div className="letter"><a>L</a></div>
+                                    <div className="letter"><a>M</a></div>
+                                    <div className="letter"><a>N</a></div>
+                                    <div className="letter"><a>O</a></div>
+                                    <div className="letter"><a>P</a></div>
+                                    <div className="letter"><a>Q</a></div>
+                                    <div className="letter"><a>R</a></div>
+                                    <div className="letter"><a>S</a></div>
+                                    <div className="letter"><a>T</a></div>
+                                    <div className="letter"><a>U</a></div>
+                                    <div className="letter"><a>V</a></div>
+                                    <div className="letter"><a>W</a></div>
+                                    <div className="letter"><a>X</a></div>
+                                    <div className="letter"><a>Y</a></div>
+                                    <div className="letter"><a>Z</a></div>
+                                </div>
                                 <Container>
                                     <Row>
 
                                         {
-                                            data.slice(146, limit).map((img, key) => {
+                                            data.slice(0, limit).map((img, key) => {
                                                 return (
                                                     <div className="card-wrapper" key={key}>
-                                                        <a onClick={()=> {history('/description/'+img.id)}} className="card-content">
+                                                        <a onClick={() => { history('/description/' + img.id) }} className="card-content">
 
                                                             <div className="image-container">
                                                                 <img
@@ -81,6 +110,7 @@ function Under5() {
                                                 );
                                             })
                                         }
+
                                     </Row>
                                 </Container>
                             </section>
@@ -98,4 +128,4 @@ function Under5() {
         </>
     );
 }
-export default Under5
+export default AtoZ

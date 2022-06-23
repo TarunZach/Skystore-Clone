@@ -4,8 +4,10 @@ import '../css/mainpage.css';
 import image from '../../storage/images.json';
 import { Button } from 'react-bootstrap';
 import LoadingSpinner from '../LoadingSpinner';
+import { useNavigate } from 'react-router-dom';
 
 function SpringSet() {
+    let history = useNavigate();
     const max = 100;
 
     const [data, getData] = useState([]);
@@ -65,7 +67,7 @@ function SpringSet() {
                                             data.slice(0, limit).map((img, key) => {
                                                 return (
                                                     <div className="card-wrapper" key={key}>
-                                                        <a href="" className="card-content">
+                                                        <a onClick={()=> {history('/description/'+img.id)}} className="card-content">
 
                                                             <div className="image-container">
                                                                 <img

@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 import LoadingSpinner from '../LoadingSpinner';
 
 function Under3() {
+    let history = useNavigate();
     const max = 200;
 
     const [data, getData] = useState([]);
@@ -65,7 +66,7 @@ function Under3() {
                                             data.slice(70, limit).map((img, key) => {
                                                 return (
                                                     <div className="card-wrapper" key={key}>
-                                                        <a href="" className="card-content">
+                                                        <a onClick={()=> {history('/description/'+img.id)}} className="card-content">
 
                                                             <div className="image-container">
                                                                 <img

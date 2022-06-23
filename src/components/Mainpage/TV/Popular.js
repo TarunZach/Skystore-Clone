@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 import LoadingSpinner from '../LoadingSpinner';
 
 function Popular() {
+    let history = useNavigate();
     const max = 240;
 
     const [data, getData] = useState([]);
@@ -65,7 +66,7 @@ function Popular() {
                                             data.slice(132, limit).map((img, key) => {
                                                 return (
                                                     <div className="card-wrapper" key={key}>
-                                                        <a href="" className="card-content">
+                                                        <a onClick={()=> {history('/description/'+img.id)}} className="card-content">
 
                                                             <div className="image-container">
                                                                 <img

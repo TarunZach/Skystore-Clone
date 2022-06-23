@@ -7,6 +7,7 @@ import LoadingSpinner from '../LoadingSpinner';
 import MovieBoxSpotlight from '../menu/MovieBox/MovieBoxSpotlight';
 
 function All() {
+    let history = useNavigate();
     const max = 100;
 
     const [data, getData] = useState([]);
@@ -71,7 +72,7 @@ function All() {
                                             data.slice(0, limit).map((img, key) => {
                                                 return (
                                                     <div className="card-wrapper" key={key}>
-                                                        <a href="" className="card-content">
+                                                        <a onClick={()=> {history('/description/'+img.id)}} className="card-content">
 
                                                             <div className="image-container">
                                                                 <img

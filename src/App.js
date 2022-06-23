@@ -26,6 +26,8 @@ import Drama from './components/Mainpage/TV/Drama';
 import Comedy from './components/Mainpage/TV/Comedy';
 import Kids from './components/Mainpage/TV/Kids';
 import All from './components/Mainpage/TV/All';
+import AtoZ from './components/Mainpage/menu/AtoZ';
+import Filmchart from './components/Mainpage/menu/FilmChart';
 
 
 function App(props) {
@@ -36,7 +38,7 @@ function App(props) {
           <Route exact path='/' element={<MainPage />}>
             <Route index element={<Home />} />
 
-            <Route path='/description/:id' element={<Description />} />
+            <Route path='description/:id' element={<Description />} />
 
             {/* Movies Tab */}
             <Route path='/rent' element={<Rent />} />
@@ -44,6 +46,8 @@ function App(props) {
             <Route path='/preorder' element={<PreOrder />} />
             <Route path='/moviebox' element={<MovieBox />} />
             <Route path='/bond' element={<Bond />} />
+            <Route path='/filmchart' element={<Filmchart />} />
+            <Route path='/atoz' element={<AtoZ />} />
             {/* End Movies Tab */}
 
 

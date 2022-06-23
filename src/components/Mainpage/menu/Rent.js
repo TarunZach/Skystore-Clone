@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 import '../css/mainpage.css';
 import image from '../../storage/images.json';
 import { Button } from 'react-bootstrap';
 import LoadingSpinner from '../LoadingSpinner';
 
 function Rent() {
+    let history = useNavigate();
     const max = 100;
 
     const [data, getData] = useState([]);
@@ -65,7 +67,8 @@ function Rent() {
                                             data.slice(0, limit).map((img, key) => {
                                                 return (
                                                     <div className="card-wrapper" key={key}>
-                                                        <a href="" className="card-content">
+                                                        
+                                                        <a onClick={()=> {history('/description/'+img.id)}} className="card-content">
 
                                                             <div className="image-container">
                                                                 <img
@@ -75,6 +78,7 @@ function Rent() {
                                                             </div>
                                                             <p className="movieTitle">{img.name}</p>
                                                         </a>
+                                                       
                                                     </div>
 
                                                 );
