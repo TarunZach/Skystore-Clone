@@ -49,7 +49,7 @@ function Logmobile() {
                     alert('Login Successful');
                     sessionStorage.setItem("loggedIn", true);
                     setTimeout(() => {
-                        history('/main')
+                        history('/')
                     }, 2);
                 }
                 else {
