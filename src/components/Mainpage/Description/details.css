@@ -42,6 +42,10 @@
     margin: auto;
 }
 
+.grad-description{
+    display: none;
+}
+
 .product-container {
     max-width: 100%;
     position: relative;
@@ -69,6 +73,20 @@
 @media (max-width: 600px) {
     .details {
         flex-direction: column;
+    }
+
+    .img-container img{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .grad-description{
+        display: block;
+        margin-bottom: 0px;
+    }
+
+    .image-title{
+        margin-top: 0px;
     }
 }
 

@@ -56,6 +56,7 @@ function Description(props) {
                                                     <img src={data.image.original} alt="" className='product-image' />
                                                     {/* <img src="https://images.store.sky.com/api/img/asset/en/66D8BB8A-E4E8-4422-9242-603110084545_B327FD95-7B5A-46F0-BB17-F40B6831E9A4_2022-6-15-T9-39-21.jpg?s=260x371" alt="" className='product-image' /> */}
                                                 </div>
+                                                <div className="gradient grad-description"></div>
                                             </div>
 
                                             <div className="detailtext-wrapper">
