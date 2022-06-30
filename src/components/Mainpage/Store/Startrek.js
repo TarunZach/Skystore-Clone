@@ -17,23 +17,22 @@ function Startrek() {
   const goTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth"
     });
   };
 
   useEffect(() => {
     fetchData();
-    console.log(limit)
-  }, [limit])
+    console.log(limit);
+  }, [limit]);
 
   const fetchData = () => {
     if (count === 0) {
       setLoading(true);
     }
 
-    fetch('https://api.tvmaze.com/shows?_limit=30')
-      .then((res) =>
-        res.json())
+    fetch("https://api.tvmaze.com/shows?_limit=30")
+      .then((res) => res.json())
 
       .then((response) => {
         console.log(response);
@@ -42,7 +41,7 @@ function Startrek() {
           setLoading(false);
           setCount(count + 1);
         }, 1500);
-      })
+      });
   };
 
   const handleLimit = () => {
@@ -53,54 +52,63 @@ function Startrek() {
 
   return (
     <>
-      {
-        loading ? <LoadingSpinner /> :
-          <>
-            <div className="card container rent">
-              <section>
-                <h1>Star Trek Wrath of Khan 40th Anniversary</h1>
-                <Container>
-                  <Row>
-
-
-                    {data.slice(40, 62).map((img, key) => {
-                      return (
-                        <div className="card-wrapper" key={key}>
-                          <a onClick={() => { history('/description/' + img.id) }} className="card-content">
-                            <div className="image-container">
-                              <img src={img.image.original} alt="" className="cardimg" />
-                            </div>
-                            <p className="movieTitle">{img.name}</p>
-                          </a>
-                        </div>
-                      );
-                    })}
-                  </Row>
-                </Container>
-              </section>
-              <div className="button-wrapper">
-                <a className="nobutton" onClick={goTop}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-chevron-compact-up"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"
-                    />
-                  </svg>{" "}
-                  Back to top
-                </a>
-              </div>
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <>
+          <div className="card container rent">
+            <section>
+              <h1 className="mobile-menutitle">
+                Star Trek Wrath of Khan 40th Anniversary
+              </h1>
+              <Container>
+                <Row>
+                  {data.slice(40, 62).map((img, key) => {
+                    return (
+                      <div className="card-wrapper" key={key}>
+                        <a
+                          onClick={() => {
+                            history("/description/" + img.id);
+                          }}
+                          className="card-content"
+                        >
+                          <div className="image-container">
+                            <img
+                              src={img.image.original}
+                              alt=""
+                              className="cardimg"
+                            />
+                          </div>
+                          <p className="movieTitle">{img.name}</p>
+                        </a>
+                      </div>
+                    );
+                  })}
+                </Row>
+              </Container>
+            </section>
+            <div className="button-wrapper">
+              <a className="nobutton" onClick={goTop}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-compact-up"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"
+                  />
+                </svg>{" "}
+                Back to top
+              </a>
             </div>
-          </>
-      }
+          </div>
+        </>
+      )}
     </>
-
   );
 }
 export default Startrek;

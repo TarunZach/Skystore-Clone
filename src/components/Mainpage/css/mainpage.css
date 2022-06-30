@@ -113,6 +113,10 @@ p {
   .rent {
     margin-top: 50px !important;
   }
+
+  .mobile-menutitle {
+    display: block !important;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
@@ -891,7 +895,7 @@ li a {
   border: 7px solid rgba(0, 0, 0, -2.6);
   border-radius: 50%;
   padding: 27px;
-  background-color: rgb(0, 0, 0, .4);
+  background-color: rgb(0, 0, 0, 0.4);
   opacity: 1;
   display: none;
 }
@@ -904,7 +908,7 @@ li a {
   border: 7px solid rgba(0, 0, 0, -2.6);
   border-radius: 50%;
   padding: 27px;
-  background-color: rgb(0, 0, 0, .4);
+  background-color: rgb(0, 0, 0, 0.4);
   opacity: 1;
   display: none;
 }
